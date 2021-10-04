@@ -73,7 +73,7 @@ def my_app(cfg):
                                 outImg = None,
                                 flags = cv.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
         cv.imwrite(os.path.join(cfg.data.output_dir_path, item), output)
-    logging.info("Execution succeded!")
+    logging.info("Execution succeeded!")
 
 if __name__ == "__main__":
     my_app()  
