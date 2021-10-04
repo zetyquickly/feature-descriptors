@@ -34,7 +34,6 @@ def my_app(cfg):
     query_image = cv.imread(filename = path,
                             flags = cv.IMREAD_GRAYSCALE)
     query_image = image_resize(query_image, width=cfg.data.image_target_width)
-    
     try:
         query_keypoints, query_descriptors = extractor(query_image)
     except Exception as e:
@@ -49,9 +48,8 @@ def my_app(cfg):
     for item in os.listdir(cfg.data.train_set_path):
         train_image_path = os.path.join(cfg.data.train_set_path, item)
         train_image = cv.imread(filename = train_image_path,
-                                flags = cv.IMREAD_GRAYSCALE)
+                                flags = cv.IMREAD_GRAYSCALE)                      
         train_image = image_resize(train_image, width=cfg.data.image_target_width)
-    
         try:
             train_keypoints, train_descriptors = extractor(train_image)
         except Exception as e:

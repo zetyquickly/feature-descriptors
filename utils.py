@@ -10,7 +10,7 @@ def image_resize(image, width = None, height = None, inter = cv2.INTER_AREA):
     # original image
     if width is None and height is None:
         return image
-
+    
     # check to see if the width is None
     if width is None:
         # calculate the ratio of the height and construct the

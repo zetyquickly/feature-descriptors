@@ -11,7 +11,7 @@ data:
   train_set_path: ${hydra:runtime.cwd}/data/train_set/
   num_matches_show: 10
   output_dir_path: results/
-  image_target_width: 600
+  image_target_width: 700
 
 hydra:
   sweep:
