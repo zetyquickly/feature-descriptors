@@ -1,0 +1,18 @@
+model:
+  # one of SIFT, SURF, KAZE, AKAZE, ORB, BRISK
+  detector_type: SIFT
+  # one of SIFT, SURF, KAZE, AKAZE, ORB, BRISK, BRIEF, FREAK
+  descriptor_type: SIFT
+  # one of BF, FLANN
+  matcher_type: FLANN
+
+data:
+  query_image_path: ${hydra:runtime.cwd}/data/query/
+  train_set_path: ${hydra:runtime.cwd}/data/train_set/
+  num_matches_show: 10
+  output_dir_path: results/
+  image_target_width: 600
+
+hydra:
+  sweep:
+    subdir: ${hydra.job.override_dirname}
